@@ -1,0 +1,7 @@
+name: Contexts
+on: push
+jobs:
+    print:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "${{ github.actor}}" #ワークフロー実行者の取得
