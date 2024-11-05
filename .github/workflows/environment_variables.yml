@@ -1,0 +1,12 @@
+name: Environment Variables
+on: push
+jobs:
+    run:
+        runs-on: ubuntu-latest
+        env:
+            BRANCH: main #ジョブレベルで環境定数を設定
+        steps:
+            - run: echo "${BRANCH}" #シェルコマンドからジョブレベルの環境変数を参照
+            - uses: actions/checkout@v4 #アクションの呼び出し
+              with:
+                ref: ${{env.BRANCH}} #envコンテキスト経由でジョブレベルの環境変数を参照
