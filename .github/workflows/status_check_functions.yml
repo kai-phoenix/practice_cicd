@@ -6,4 +6,4 @@ jobs:
         steps:
             - run: exit 1 #終了ステータスが0以外のためエラー発生
             - run: echo "Hello"
-        if: ${{failure()}} #エラーが発生してもfailureがあるため実行される
+              if: ${{ failure() }} #エラーが発生してもfailureがあるため実行される
