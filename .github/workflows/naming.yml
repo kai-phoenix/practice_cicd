@@ -1,4 +1,4 @@
-name: Namming
+name: Naming
 on: push
 jobs:
     print:
